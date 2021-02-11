@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <title>Happy New Year 2021!</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+        }
+
+        .center {
+            text-align: center;
+            vertical-align: middle;
+        }​
+       
+    </style>
+</head>
+<body>
+    <div class="center mt-5">
+            <h4 class="display-4">Chúc các bạn năm mới vui vẻ nhá!</h4>
+            <button class="btn btn-outline-danger center mt-4" data-toggle="modal" data-target="#exampleModalCenter">Ấn đây để có quà</button>
+    </div>
+   
+   <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLongTitle">:))</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="row">
+                <div class="col col-4">
+                     <img src="https://scontent.fhan2-6.fna.fbcdn.net/v/t1.0-9/123200819_1440025362857686_4929794448850631979_o.jpg?_nc_cat=100&ccb=3&_nc_sid=09cbfe&_nc_ohc=1GYmfqwv44QAX_sLlfW&_nc_ht=scontent.fhan2-6.fna&oh=569017de8b9ac1f0fa92598c279e47a8&oe=604BE16D" alt="avatar" style="border-radius: 50%" width="80%">
+                </div>
+                <div class="col col-8">
+                    <form>
+                        <b>Số tài khoản:</b> <input type="text" name="" id="stk" value="030040389365" disabled="true" style="border:none; outline: none;">
+                        <p style="margin-bottom: 0">Sacombank chi nhánh Hải Phòng</p>
+                        <b>Số điện thoại:</b> <input type="text" name="" id="sdt" value="0943655821"  disabled="true" style="border:none; outline: none;">
+                    </form>
+                </div>
+            </div>
+
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Đóng</button>
+            <button type="button" class="btn btn-primary" onclick="copySTK()">Copy STK</button>
+            <button type="button" class="btn btn-primary" onclick="copySDT()">Copy SDT</button>
+          </div>
+        </div>
+      </div>
+    </div>
+</body>
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script type="text/javascript">
+function copySTK() {
+  var copyText = document.getElementById("stk");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999);
+      document.execCommand("copy");
+      alert("Copy STK rùi nha <3: " + copyText.value);
+}
+function copySTK() {
+  var copyText = document.getElementById("sdt");
+      copyText.select();
+      copyText.setSelectionRange(0, 99999); 
+      document.execCommand("copy");
+      alert("Copy SDT rùi nha <3: " + copyText.value);
+}
+
+</script>
+</html>
